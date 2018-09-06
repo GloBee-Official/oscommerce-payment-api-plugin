@@ -2,6 +2,7 @@
 
 require __DIR__.'/globee/autoload.php';
 require 'globee/remove_order.php';
+require 'includes/application_top.php';
 
 $requestBody = file_get_contents('php://input');
 $data = json_decode($requestBody, true);

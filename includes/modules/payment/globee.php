@@ -15,7 +15,6 @@ if (!(function_exists('tep_remove_order'))) {
 
 class globee
 {
-
     /**
      * @var
      */
