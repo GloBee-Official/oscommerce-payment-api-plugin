@@ -4,8 +4,7 @@ require __DIR__.'/globee/autoload.php';
 require 'globee/remove_order.php';
 
 $requestBody = file_get_contents('php://input');
-$input = json_decode($requestBody, true);
-$data = $input['data'];
+$data = json_decode($requestBody, true);
 $paymentRequest = \GloBee\PaymentApi\Models\PaymentRequest::fromResponse($data);
 $orderId = $paymentRequest->custom_payment_id;
 
