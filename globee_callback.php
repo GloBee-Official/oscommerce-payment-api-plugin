@@ -1,6 +1,6 @@
 <?php
 
-require 'globee/PaymentApi.php';
+require __DIR__.'/globee/autoload.php';
 require 'globee/remove_order.php';
 
 $requestBody = file_get_contents('php://input');
