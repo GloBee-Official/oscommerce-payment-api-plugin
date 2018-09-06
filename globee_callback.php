@@ -6,7 +6,7 @@ require 'globee/remove_order.php';
 $requestBody = file_get_contents('php://input');
 $data = json_decode($requestBody, true);
 $paymentRequest = \GloBee\PaymentApi\Models\PaymentRequest::fromResponse($data);
-$orderId = $paymentRequest->custom_payment_id;
+$orderId = $paymentRequest->customPaymentId;
 
 switch ($paymentRequest->status) {
     case 'paid':
